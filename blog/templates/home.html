@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Arman</title>
-</head>
-<body>
-<h1>bloge site</h1>
-</body>
-</html>
+{% extends "basefile.html" %}
+{% block content %}
+
+{% for blog in blog_post %}
+<h1>{{ blog.title }}</h1>
+<h4>{{ blog.content }}</h4>
+<p>{{ blog.post }}</p>
+<p>{{ blog.post_create_date }}</p>
+{% endfor %}
+
+{% endblock %}
